@@ -1,6 +1,6 @@
 # Genetic Sudoku Solver
 
-A Python-based Sudoku puzzle solver leveraging the power of Genetic Algorithms to find solutions efficiently.
+A Python Sudoku puzzle solver using a Genetic Algorithm.
 
 ## Overview
 
@@ -14,7 +14,7 @@ This project implements a Genetic Algorithm to solve Sudoku puzzles. Genetic Alg
 
 ## Requirements
 
-- Python 3.x
+- Python 3.0 (at least)
 
 ## Installation
 
@@ -56,19 +56,19 @@ The Sudoku puzzle should be provided in the script as a 9x9 grid, where:
 Example:
 ```python
 puzzle = [
-    [5, 3, 0, 0, 7, 0, 0, 0, 0],
-    [6, 0, 0, 1, 9, 5, 0, 0, 0],
-    [0, 9, 8, 0, 0, 0, 0, 6, 0],
-    [8, 0, 0, 0, 6, 0, 0, 0, 3],
-    [4, 0, 0, 8, 0, 3, 0, 0, 1],
-    [7, 0, 0, 0, 2, 0, 0, 0, 6],
-    [0, 6, 0, 0, 0, 0, 2, 8, 0],
-    [0, 0, 0, 4, 1, 9, 0, 0, 5],
-    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+7 8 0 4 0 0 1 2 0
+6 0 0 0 7 5 0 0 9
+0 0 0 6 0 1 0 7 8
+0 0 7 0 4 0 2 6 0
+0 0 1 0 5 0 9 3 0
+9 0 4 0 6 0 0 0 5
+0 7 0 3 0 0 0 1 2
+1 2 0 0 0 7 4 0 0
+0 4 9 2 0 6 0 0 7
 ]
 ```
 
-You can modify the puzzle in the `main.py` file to suit your needs.
+You can modify the puzzle to suit your needs.
 
 ## How It Works
 
