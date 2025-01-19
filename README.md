@@ -28,24 +28,10 @@ This project implements a Genetic Algorithm to solve Sudoku puzzles. Genetic Alg
    cd Genetic-Sudoku-Solver
    ```
 
-3. (Optional) Set up a virtual environment:
+3. Run the main script to solve a Sudoku puzzle:
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   python3 main.py
    ```
-
-4. Install required dependencies (if any):
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Usage
-
-Run the main script to solve a Sudoku puzzle:
-
-```bash
-python3 main.py
-```
 
 ### Input Format
 
@@ -55,7 +41,7 @@ The Sudoku puzzle should be provided in the script as a 9x9 grid, where:
 
 Example:
 ```python
-puzzle = [
+medium.txt
 7 8 0 4 0 0 1 2 0
 6 0 0 0 7 5 0 0 9
 0 0 0 6 0 1 0 7 8
@@ -65,7 +51,6 @@ puzzle = [
 0 7 0 3 0 0 0 1 2
 1 2 0 0 0 7 4 0 0
 0 4 9 2 0 6 0 0 7
-]
 ```
 
 You can modify the puzzle to suit your needs.
@@ -78,24 +63,14 @@ You can modify the puzzle to suit your needs.
 4. **Crossover and Mutation**: New candidates are created by combining parts of the best solutions and introducing small random changes to maintain diversity.
 5. **Iteration**: This process is repeated for multiple generations until a valid solution is found or a stopping criterion is met.
 
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests to enhance the functionality, performance, or usability of this project.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgments
-
-This project is inspired by the principles of Genetic Algorithms and their application to optimization problems. Special thanks to the open-source community for providing tools and frameworks that made this project possible.
+## Results
+![Screenshot from 2025-01-19 13-10-34](https://github.com/user-attachments/assets/5b017696-596d-48d5-b331-3c72a3e3898f)
+![Figure_1](https://github.com/user-attachments/assets/0a32e5e0-af37-4b7b-a156-79dc824106a7)
 
 ---
-
 Happy solving! If you find this project useful, don't forget to give it a star! ⭐
 
 
 
-![Screenshot from 2025-01-19 13-10-34](https://github.com/user-attachments/assets/5b017696-596d-48d5-b331-3c72a3e3898f)
-![Figure_1](https://github.com/user-attachments/assets/0a32e5e0-af37-4b7b-a156-79dc824106a7)
+
 
