@@ -68,8 +68,6 @@ For example:
 ![Screenshot from 2025-01-19 13-12-07](https://github.com/user-attachments/assets/b44f55a1-fd6e-432d-a403-ed6bca347669)
 ![Screenshot from 2025-01-19 13-12-23](https://github.com/user-attachments/assets/def2904f-e188-4cd6-a40f-fd767574762f)
 
----
-Happy solving! If you find this project useful, don't forget to give it a star! ⭐
 
 
 
