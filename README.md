@@ -4,7 +4,7 @@ A Python Sudoku puzzle solver using a Genetic Algorithm.
 
 ## Overview
 
-This project implements a Genetic Algorithm to solve Sudoku puzzles. Genetic Algorithms are a type of evolutionary algorithm inspired by natural selection, and they are particularly effective for optimization problems like Sudoku. This solver demonstrates how computational intelligence can tackle challenging puzzles with elegance and efficiency.
+This project implements a Genetic Algorithm to solve Sudoku puzzles. Genetic Algorithms are a type of evolutionary algorithm inspired by natural selection, and they are particularly effective for optimization problems like Sudoku.
 
 ## Requirements
 
