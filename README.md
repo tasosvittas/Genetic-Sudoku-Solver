@@ -61,6 +61,13 @@ You can modify the puzzle to suit your needs.
 ![Screenshot from 2025-01-19 13-10-34](https://github.com/user-attachments/assets/5b017696-596d-48d5-b331-3c72a3e3898f)
 ![Figure_1](https://github.com/user-attachments/assets/0a32e5e0-af37-4b7b-a156-79dc824106a7)
 
+##Future Plans
+
+In the next version, we plan to add graphical features to enhance the user experience. 
+For example:
+![Screenshot from 2025-01-19 13-12-07](https://github.com/user-attachments/assets/b44f55a1-fd6e-432d-a403-ed6bca347669)
+![Screenshot from 2025-01-19 13-12-23](https://github.com/user-attachments/assets/def2904f-e188-4cd6-a40f-fd767574762f)
+
 ---
 Happy solving! If you find this project useful, don't forget to give it a star! ⭐
 
