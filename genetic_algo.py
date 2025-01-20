@@ -52,7 +52,7 @@ def fitness(chromosome):
 
 def select(population):
     #to kalytero chromosome metaksy enws sample 3wn
-    tournament = rnd.sample(population, 3)
+    tournament = rnd.sample(population, 5)
     return max(tournament, key=fitness)
     
 def crossover(parent1, parent2):
