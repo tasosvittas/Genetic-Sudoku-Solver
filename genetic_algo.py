@@ -87,6 +87,50 @@ def plot_progress(generations, best_fitness_scores, avg_fitness_scores):
     plt.title("Genetic Algorithm Progress")
     plt.show()
 
+# def genetic_algorithm(initial_sudoku, population_size=200, generations=30000, mutation_rate=0.1):
+#     population = make_population(population_size, initial_sudoku)
+#     best_fitness_scores = []
+#     avg_fitness_scores = []
+#     generation_list = []
+
+#     for generation in range(generations):
+#         # ypologismos gia plot kai print
+#         population = sorted(population, key=fitness, reverse=True)
+#         best_fitness = fitness(population[0])
+#         avg_fitness = sum(fitness(ind) for ind in population) / population_size
+
+#         best_fitness_scores.append(best_fitness)
+#         avg_fitness_scores.append(avg_fitness)
+#         generation_list.append(generation)
+
+#         print(f"Generation {generation}, Best Fitness: {best_fitness}")
+        
+#         # to kalytero sudoku
+#         print("Best Sudoku:")
+#         print_sudoku(population[0])
+#         print("-" * 30)
+
+#         # elegxos gia solution
+#         if is_solution(population[0]):
+#             print(f"Solution found in generation {generation}!")
+#             plot_progress(generation_list, best_fitness_scores, avg_fitness_scores)
+#             return population[0]
+
+#         #next generation
+#         next_population = population[:5]  # Elitismos: diathrw tis 5 kalyteres lyseis
+#         while len(next_population) < population_size:
+#             parent1 = select(population)
+#             parent2 = select(population)
+#             child1, child2 = crossover(parent1, parent2)
+#             child1 = mutation(child1, mutation_rate, initial_sudoku)
+#             child2 = mutation(child2, mutation_rate, initial_sudoku)
+#             next_population.extend([child1, child2])
+#         population = next_population[:population_size]
+
+#     plot_progress(generation_list, best_fitness_scores, avg_fitness_scores)
+#     print("No solution found within the generation limit.")
+#     return None
+
 def genetic_algorithm(initial_sudoku, population_size=200, generations=30000, mutation_rate=0.1):
     population = make_population(population_size, initial_sudoku)
     best_fitness_scores = []
@@ -94,7 +138,7 @@ def genetic_algorithm(initial_sudoku, population_size=200, generations=30000, mu
     generation_list = []
 
     for generation in range(generations):
-        # ypologismos gia plot kai print
+        # Calculate fitness for plotting and printing
         population = sorted(population, key=fitness, reverse=True)
         best_fitness = fitness(population[0])
         avg_fitness = sum(fitness(ind) for ind in population) / population_size
@@ -104,27 +148,36 @@ def genetic_algorithm(initial_sudoku, population_size=200, generations=30000, mu
         generation_list.append(generation)
 
         print(f"Generation {generation}, Best Fitness: {best_fitness}")
-        
-        # to kalytero sudoku
         print("Best Sudoku:")
         print_sudoku(population[0])
         print("-" * 30)
 
-        # elegxos gia solution
+        # Check if solution is found
         if is_solution(population[0]):
             print(f"Solution found in generation {generation}!")
             plot_progress(generation_list, best_fitness_scores, avg_fitness_scores)
             return population[0]
 
-        #next generation
-        next_population = population[:5]  # Elitismos: diathrw tis 5 kalyteres lyseis
+        # Create the next generation
+        next_population = population[:10]  # Elitism: Keep the top 10 individuals
+
+        # Crossover and mutation for the rest of the population
         while len(next_population) < population_size:
             parent1 = select(population)
             parent2 = select(population)
             child1, child2 = crossover(parent1, parent2)
+
+            # Apply mutation with adaptive probabilities
             child1 = mutation(child1, mutation_rate, initial_sudoku)
             child2 = mutation(child2, mutation_rate, initial_sudoku)
+
             next_population.extend([child1, child2])
+
+        # Apply forced mutation on a small fraction of the weakest individuals
+        weakest_start = int(0.8 * population_size)
+        for i in range(weakest_start, population_size):
+            next_population[i] = mutation(next_population[i], mutation_rate * 1.5, initial_sudoku)
+
         population = next_population[:population_size]
 
     plot_progress(generation_list, best_fitness_scores, avg_fitness_scores)
