@@ -1,7 +1,7 @@
 from file_reader import read_sudoku, print_sudoku
 from genetic_algo import genetic_algorithm
 
-file_path = "./sample_sudoku/medium.txt"
+file_path = "./sample_sudoku/easy.txt"
 initial_sudoku = read_sudoku(file_path)
 print("Initial Sudoku Puzzle:")
 print_sudoku(initial_sudoku)
